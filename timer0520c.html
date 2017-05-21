@@ -1,0 +1,32 @@
+<html>
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Rokkitt:300,400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Exo:300,400' rel='stylesheet' type='text/css'>
+  <link href='file:///Users/YosemiteSam/Documents/codingDocs/git/timerCountdown/timer0520.css' rel='stylesheet' type='text/css'>
+  <head>
+  <body>
+  <style>
+</style>
+<p id="timer">   </p>
+<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+<script>
+convertSeconds = function(s) {
+    var min = Math.floor(s/60);
+var sec = ("00" +(s % 60)).substr(-2);
+return min + ':' + sec;
+}
+var counter = 0;
+var timeleft = (prompt('How many minutes are you counting down?') * 60);         
+var interval = setInterval(timeIt,1000);
+function timeIt() {
+counter++;
+$("#timer").html(convertSeconds(timeleft-counter));
+if (counter == timeleft) {
+alert('Time\'s up!');
+clearInterval(interval);
+}
+}
+
+</script>
+</body>
+<html>

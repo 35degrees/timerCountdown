@@ -1,0 +1,11 @@
+body {
+background: MidnightBlue url(http://cistrome.org/TIMER/img/timer.png) no-repeat top left;
+}
+#timer {
+font-family: Exo;
+font-size: 12em;
+color: #f3f704;
+text-align: center;
+margin-top: 20px;
+}
+
